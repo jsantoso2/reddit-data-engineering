@@ -7,7 +7,7 @@
 - Visualization of Data in Google Data Studio
 
 ### Purpose + Goal:
-- Learn technologies like (Kafka, Spark Streaming, Data Studio), NOT producing the best/optimal architecture
+- Learn technologies like (Kafka, Spark Streaming, Cloud Functions, Data Studio), NOT producing the best/optimal architecture
 
 ### Pipeline Diagram:
 <p align="center"> <img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/pipeline_diagram.png height="150"></p>
@@ -23,8 +23,8 @@ Currently, Spark Stream writes a new file every 4 hours -> which triggers the Cl
     <td>Comments</td>
   </tr>
   <tr>
-    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/submissions_data.png height="250"></td>
-    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/comments_data.png height="250"></td>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/submissions_data.png height="200"></td>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/comments_data.png height="180"></td>
   </tr>
 </table>
 <p align="left"> </p>
@@ -36,8 +36,8 @@ Currently, Spark Stream writes a new file every 4 hours -> which triggers the Cl
     <td>Part 2</td>
   </tr>
   <tr>
-    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_1.png height="350"></td>
-    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_2.png height="350"></td>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_1.png height="325"></td>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_2.png height="325"></td>
   </tr>
 </table>
 
