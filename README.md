@@ -6,14 +6,42 @@
 - Saves data into Google Cloud Storage Bucket (Data Lake) -> Batch load data into BigQuery (Data Warehouse) using Cloud Functions
 - Visualization of Data in Google Data Studio
 
-### Purpose of this project:
+### Purpose + Goal:
 - Learn technologies like (Kafka, Spark Streaming, Data Studio), NOT producing the best/optimal architecture
 
-### Dashboard Link: https://datastudio.google.com/reporting/afbed74b-8f18-4012-bc91-ddbc66e4574c
-
 ### Pipeline Diagram:
-
+<p align="center"> <img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/pipeline_diagram.png height="150"></p>
 Currently, Spark Stream writes a new file every 4 hours -> which triggers the Cloud Function to load to BigQuery 
+
+#### Confluent Kafka UI:
+<p align="left"> <img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/kafka_topics.png height="250"></p>
+
+#### Sample Data:
+<table>
+  <tr>
+    <td>Submissions</td>
+    <td>Comments</td>
+  </tr>
+  <tr>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/submissions_data.png height="250"></td>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/comments_data.png height="250"></td>
+  </tr>
+</table>
+<p align="left"> </p>
+
+#### Dashboard UI:
+<table>
+  <tr>
+    <td>Part 1</td>
+    <td>Part 2</td>
+  </tr>
+  <tr>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_1.png height="350"></td>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_2.png height="350"></td>
+  </tr>
+</table>
+
+#### Dashboard Link: https://datastudio.google.com/reporting/afbed74b-8f18-4012-bc91-ddbc66e4574c
 
 ### Tools/Framework Used:
 - Terraform: To create and standardize GCP resources (ex: storage bucket, VM, dataproc cluster, etc.)
