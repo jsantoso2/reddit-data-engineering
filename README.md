@@ -36,8 +36,8 @@ Currently, Spark Stream writes a new file every 4 hours -> which triggers the Cl
     <td>Part 2</td>
   </tr>
   <tr>
-    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_1.png height="325"></td>
-    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_2.png height="325"></td>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_1.png height="300"></td>
+    <td valign="top"><img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/dashboard_2.png height="300"></td>
   </tr>
 </table>
 
