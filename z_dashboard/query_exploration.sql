@@ -1,6 +1,11 @@
 --Submissions Table should be Unique (One Row per Submission)
 --Comments Table might have duplicates
 
+-- ################################ Query 1 to Handle Overall Views #######################
+--Submissions Table should be Unique (One Row per Submission)
+--Comments Table might have duplicates
+
+-- ################################ Query 1 to Handle Overall Views #######################
 SELECT submission.* EXCEPT(create_time, ups, upvote_ratio, images, videos, num_comments), 
        comments.id AS comment_id,
        comments.author AS comment_author,
@@ -18,7 +23,14 @@ SELECT submission.* EXCEPT(create_time, ups, upvote_ratio, images, videos, num_c
        COUNT(DISTINCT videos.element) AS num_videos,
        STRING_AGG(images.element) AS string_submission_images,
        STRING_AGG(videos.element) AS string_submission_videos,
-FROM `learning-gcp-356802.fedex_reddit_dataset.submissions` AS submission
+FROM (
+       SELECT * EXCEPT(rownum)
+       FROM (
+              SELECT *, ROW_NUMBER() OVER (PARTITION BY id) AS rownum
+              FROM `learning-gcp-356802.fedex_reddit_dataset.submissions`
+       )
+       WHERE rownum = 1
+) AS submission
 LEFT JOIN UNNEST(submission.images.list) AS images
 LEFT JOIN UNNEST(submission.videos.list) AS videos
 LEFT JOIN (
@@ -28,3 +40,15 @@ LEFT JOIN (
 ) AS comments ON submission.id = comments.link_id
 GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
 ORDER BY submission.id
+
+
+--################################ Query 2 Activities ###########################
+SELECT author, author_flair, COUNT(DISTINCT id) AS num_submissions, 0 AS num_comments
+FROM `learning-gcp-356802.fedex_reddit_dataset.submissions` AS submission
+GROUP BY author, author_flair
+
+UNION ALL
+
+SELECT author, author_flair, 0 AS num_submissions, COUNT(DISTINCT id) AS num_comments
+FROM `learning-gcp-356802.fedex_reddit_dataset.comments` AS comments
+GROUP BY author, author_flair
