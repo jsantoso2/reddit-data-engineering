@@ -69,3 +69,6 @@ Currently, Spark Stream writes a new file every 4 hours -> which triggers the Cl
 5. Data Studio
     - Connect to BigQuery
 
+### References:
+- https://github.com/ankurchavda/streamify
+- Data Engineering Zoomcamp: https://www.youtube.com/c/DataTalksClub/
