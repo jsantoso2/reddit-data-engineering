@@ -10,7 +10,7 @@
 - Learn technologies like (Kafka, Spark Streaming, Cloud Functions, Data Studio), NOT producing the best/optimal architecture
 
 ### Pipeline Diagram:
-<p align="center"> <img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/pipeline_diagram.png height="150"></p>
+<p align="center"> <img src=https://github.com/jsantoso2/reddit-data-engineering/blob/main/images/pipeline_diagram.png height="130"></p>
 Currently, Spark Stream writes a new file every 4 hours -> which triggers the Cloud Function to load to BigQuery 
 
 #### Confluent Kafka UI:
