@@ -41,7 +41,7 @@ Currently, Spark Stream writes a new file every 4 hours -> which triggers the Cl
   </tr>
 </table>
 
-#### Dashboard Link: https://datastudio.google.com/reporting/afbed74b-8f18-4012-bc91-ddbc66e4574c
+#### Dashboard Link: https://datastudio.google.com/reporting/7f5bab9b-edf8-4cfa-a51c-b61dcf35800e
 
 ### Tools/Framework Used:
 - Terraform: To create and standardize GCP resources (ex: storage bucket, VM, dataproc cluster, etc.)
