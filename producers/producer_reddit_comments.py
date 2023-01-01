@@ -21,9 +21,9 @@ producer = KafkaProducer(bootstrap_servers=[KAFKA_ADDRESS + ':9092'],
 
 ## Create PRAW Instances
 reddit = praw.Reddit(
-    client_id="i9VuhpBLxkcF2k4CgOcYeg",
-    client_secret="-R-7AnHMMyAgqkJz5ooNTsBuTh5DbQ",
-    user_agent="python:test:v1.0 (by u/jjjjj12377)",
+    client_id="",
+    client_secret="",
+    user_agent="",
 )
 
 ## Make sure it is read-only
